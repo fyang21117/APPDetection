@@ -1,0 +1,2 @@
+rootProject.name='AppDetection'
+include ':app'

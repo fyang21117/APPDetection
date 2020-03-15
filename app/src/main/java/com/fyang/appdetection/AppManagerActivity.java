@@ -176,6 +176,8 @@ public class AppManagerActivity extends Activity implements View.OnClickListener
                     holder = new ViewHolder();
                     holder.iv_icon = (ImageView) convertView.findViewById(R.id.iv_icon);
                     holder.tv_name = (TextView) convertView.findViewById(R.id.tv_name);
+
+                    //2020年3月15日11:37:26，考虑添加软件安装包名称、安装路径等
                     holder.tv_path = (TextView) convertView.findViewById(R.id.tv_path);
                     convertView.setTag(holder);
                 } else {

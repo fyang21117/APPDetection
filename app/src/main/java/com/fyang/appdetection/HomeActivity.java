@@ -149,13 +149,14 @@ public class HomeActivity extends Activity {
 
     private void initData() {
         mTitleStrs = new String[]{
-                 "软件管理", "进程管理", "流量统计", "手机杀毒", "缓存清理", "高级工具"
+                 "软件管理", "进程管理", "流量统计", "手机杀毒", "缓存清理", "高级工具","APK检测"
         };
 
         mDrawableIds = new int[]{
                 R.drawable.home_apps, R.drawable.home_taskmanager,
                 R.drawable.home_netmanager,R.drawable.home_trojan,
-                R.drawable.home_sysoptimize, R.drawable.home_tools
+                R.drawable.home_sysoptimize, R.drawable.home_tools,
+                R.drawable.home_callmsgsafe
         };
         //九宫格控件设置数据适配器(等同ListView数据适配器)
         gv_home.setAdapter(new MyAdapter());
@@ -180,6 +181,9 @@ public class HomeActivity extends Activity {
                         break;
                     case 5:
                         startActivity(new Intent(getApplicationContext(), AToolActivity.class));
+                        break;
+                    case 6:
+                        startActivity(new Intent(getApplicationContext(), ApkDetectActivity.class));
                         break;
                 }
             }

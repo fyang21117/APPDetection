@@ -10,6 +10,8 @@ public class HelpItem extends DataSupport {
 
     private CharSequence Appname;
     private CharSequence Actname;
+    private String APKname;
+    private String APKpath;
     private String Packagename;
 
     public HelpItem() {
@@ -17,13 +19,15 @@ public class HelpItem extends DataSupport {
     }
 
     public HelpItem(int id, String name, String Packagename, CharSequence Appname,
-                    CharSequence Actname) {
+                    CharSequence Actname,String APKname,String APKpath) {
         super();
         this.id = id;
         this.name = name;
         this.Packagename = Packagename;
         this.Actname = Actname;
         this.Appname = Appname;
+        this.APKname = APKname;
+        this.APKpath = APKpath;
     }
 
     public int getId() {
@@ -75,7 +79,6 @@ public class HelpItem extends DataSupport {
     public String getPackagename() {
         return Packagename;
     }
-
     public void setPackagename(String packagename) {
         this.Packagename = packagename;
     }
@@ -83,8 +86,22 @@ public class HelpItem extends DataSupport {
     public CharSequence getActname() {
         return Actname;
     }
-
     public void setActname(CharSequence actname) {
         this.Actname = actname;
     }
+
+
+    public CharSequence getAPKname(){
+        return APKname;
+    }
+    public void setAPKname(String apkname){
+        this.APKname = apkname;
+    }
+    public CharSequence getAPKpath(){
+        return APKpath;
+    }
+    public void setAPKpath(String apkpath){
+        this.APKpath = apkpath;
+    }
+
 }

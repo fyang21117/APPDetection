@@ -44,13 +44,11 @@ public class MyAdapter extends BaseAdapter {
         //在view视图中查找id为image_photo的控件
         ImageView image_photo=   view.findViewById(R.id.image_photo);
         TextView tv_name=   view.findViewById(R.id.text1);
-        TextView tv_age=   view.findViewById(R.id.text2);
+        TextView tv_path=   view.findViewById(R.id.text2);
 
         image_photo.setImageResource(item.getImage_photo());
-        tv_name.setText(item.getAppname());
-        tv_age.setText(String.valueOf(item.getPackagename()));
-        //tv_name.setText(String.valueOf(item.getName()));
-        //tv_age.setText(String.valueOf(item.getInfo()));
+        tv_name.setText(item.getAPKname());
+        tv_path.setText(item.getAPKpath());
         return view;
     }
 }
